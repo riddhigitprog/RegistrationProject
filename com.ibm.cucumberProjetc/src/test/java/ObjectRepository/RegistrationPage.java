@@ -1,5 +1,7 @@
 package ObjectRepository;
 
+import java.util.Random;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -33,13 +35,23 @@ public void LastNameInputfield(String arg1) {
 		LastNameInputfield.sendKeys(arg1);
 	}
 public void EmailInputfield(String arg1) {
-	
-	 EmailInputfield.sendKeys(arg1);
-	
+	if (arg1.contains("emailregexp")) {
+	//	System.out.println("arg 1 is"+arg1);
+		Random randomGenerator = new Random();  
+		int randomInt = randomGenerator.nextInt(1000);  
+		EmailInputfield.sendKeys("username"+ randomInt +"@gmail.com");   
+	}else {
+		 EmailInputfield.sendKeys(arg1);
+	}
 }
 public void UsernameInputfield(String arg1) {
+	if(arg1.contains("usernameregexp")) {
+		Random randomGenerator = new Random();  
+		int randomInt = randomGenerator.nextInt(1000);  
+		UserNameInputfield.sendKeys("username"+ randomInt);
+	}else {
 	UserNameInputfield.sendKeys(arg1);
-	
+	}
 }
 public void PasswordInputfield(String arg1) {
 	 PasswordInputfield.sendKeys(arg1);

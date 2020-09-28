@@ -5,8 +5,8 @@ Given I navigate to "http://elearningm1.upskills.in/"
 And I click on SignUp button
 And I enter Firstname the value "abc"
 And I enter Lastname the value "abc"
-And I enter Email the value "abc12@gmail.com"
-And I enter Username the value "abc12"
+And I enter Email the value "emailregexp"
+And I enter Username the value "usernameregexp"
 And I enter Password the value "abc"
 And I enter ConfirmPassword the value "abc"
 When I click on Register button
